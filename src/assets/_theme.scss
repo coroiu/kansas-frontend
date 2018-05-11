@@ -1,0 +1,62 @@
+// stylelint-disable
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #868e96 !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+
+$white:  #fff !default;
+$black:  #000 !default;
+$red:    #d9534f !default;
+$orange: #f0ad4e !default;
+$yellow: #ffd500 !default;
+$green:  #5cb85c !default;
+$blue:   #0275d8 !default;
+$teal:   #5bc0de !default;
+$pink:   #ff5b77 !default;
+$purple: #613d7c !default;
+
+// Create grayscale
+$gray-dark:                 #272B30;
+$gray:                      #3A3F44;
+$gray-light:                #52575C;
+$gray-lighter:              #7A8288;
+$gray-lightest:             #999;
+
+// Reassign color vars to semantic color scheme
+// $brand-primary:             $gray-light;
+// $brand-success:             #62c462;
+// $brand-info:                #5bc0de;
+// $brand-warning:             #f89406;
+// $brand-danger:              #ee5f5b;
+// $brand-inverse:             $gray-dark !default;
+
+$theme-colors: (
+  // "primary":    $gray-light,
+  // "secondary":  $gray-600,
+  "success":    #62c462,
+  "info":       #5bc0de,
+  "warning":    #f89406,
+  "danger":     #ee5f5b,
+  "light":      $gray-100,
+  "dark":       $gray-800
+);
+
+$body-bg:       $gray-dark;
+$body-color:    #aaa;
+$inverse-bg:    $gray-dark !default;
+$inverse-color: $gray-lighter !default;
+
+$link-color:            #fff;
+$link-decoration:       none !default;
+$link-hover-color:      darken($link-color, 15%) !default;
+$link-hover-decoration: underline !default;
+
+$text-muted: $gray-light;
