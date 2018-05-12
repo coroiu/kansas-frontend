@@ -34,4 +34,9 @@
       line-height: $icon-height;
     }
   }
+
+  #content-container {
+    background: $content-bg;
+    min-height: 500px;
+  }
 }

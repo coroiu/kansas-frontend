@@ -12,6 +12,10 @@ ul {
     font-size: 1.5rem;
     line-height: 1;
 
+    &:focus {
+      outline: none;
+    }
+
     &.active {
       color: $body-color;
 
