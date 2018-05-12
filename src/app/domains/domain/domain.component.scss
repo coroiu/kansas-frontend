@@ -1,0 +1,23 @@
+@import "~assets/global";
+
+.last-col {
+  overflow: auto;
+
+  .toggle {
+    float: left;
+
+    .btn-group {
+      display: flex;
+
+      .btn:focus {
+        box-shadow: none;
+      }
+    }
+  }
+
+  .remove {
+    float: left;
+    padding-top: 2rem;
+    margin-left: $grid-gutter-width;
+  }
+}

@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-md-3">
+    <label>Domain</label>
+    <input type="text" class="form-control" [ngModel]="domain.domain">
+  </div>
+
+  <div class="col-md-3">
+    <label>Target</label>
+    <input type="text" class="form-control" [ngModel]="domain.target">
+  </div>
+
+  <div class="col-md-2">
+    <label>Port</label>
+    <input type="number" class="form-control" [ngModel]="domain.port">
+  </div>
+
+  <div class="col-md-4 last-col">
+    <div class="toggle">
+      <label>Protected</label>
+      <div class="btn-group btn-group-toggle">
+        <button class="btn btn-primary"
+          [class.btn-primary]="domain.requiresAuthentication"
+          [class.btn-secondary]="!domain.requiresAuthentication"
+          (click)="domain.requiresAuthentication = true">
+            Yes
+        </button>
+        <button class="btn btn-primary"
+          [class.btn-primary]="!domain.requiresAuthentication"
+          [class.btn-secondary]="domain.requiresAuthentication"
+          (click)="domain.requiresAuthentication = false">
+            No
+        </button>
+      </div>
+    </div>
+    <div class="remove">
+      <button class="btn btn-danger" (click)="remove()">Remove</button>
+    </div>
+  </div>
+</div>

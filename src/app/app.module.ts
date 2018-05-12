@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { InlineSVGModule } from 'ng-inline-svg';
 
 import { AppComponent } from './app.component';
@@ -11,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { DomainsComponent } from './domains/domains.component';
 import { DomainsService } from './domains/domains.service';
 import { ApiClientService } from './core/api-client.service';
+import { DomainComponent } from './domains/domain/domain.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +20,15 @@ import { ApiClientService } from './core/api-client.service';
     HomeComponent,
     FooterComponent,
     NavComponent,
-    DomainsComponent
+    DomainsComponent,
+    DomainComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     InlineSVGModule,
+    FormsModule
   ],
   providers: [
     ApiClientService,
