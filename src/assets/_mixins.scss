@@ -1,0 +1,4 @@
+@mixin make-fa-icon($icon) {
+  @include fa-icon();
+  content: $icon;
+}

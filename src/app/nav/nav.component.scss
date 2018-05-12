@@ -1,0 +1,36 @@
+@import "~assets/global";
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin: 0 0 0.75em 0;
+    padding: 0;
+    color: $text-muted;
+    font-size: 1.5rem;
+    line-height: 1;
+
+    &.active {
+      color: $body-color;
+
+      &::before {
+        @include make-fa-icon("\f054");
+        font-size: 1rem;
+        top: -0.11em;
+        position: relative;
+        margin-right: 0.5em;
+      }
+    }
+
+    &:hover {
+      color: $body-color;
+      cursor: pointer;
+
+      &.active {
+        cursor: default;
+      }
+    }
+  }
+}
