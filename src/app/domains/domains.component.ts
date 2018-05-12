@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DomainModel } from './domains.model';
+import { DomainsService } from './domains.service';
 
 @Component({
   selector: 'app-domains',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./domains.component.scss']
 })
 export class DomainsComponent implements OnInit {
+  domains: DomainModel[];
 
-  constructor() { }
+  constructor(private domainsService: DomainsService) { }
 
   ngOnInit() {
+    this.domainsService
+      .list()
+      .subscribe(d => this.domains = d);
   }
 
 }

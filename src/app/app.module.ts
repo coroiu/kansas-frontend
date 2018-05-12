@@ -9,6 +9,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { NavComponent } from './nav/nav.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DomainsComponent } from './domains/domains.component';
+import { DomainsService } from './domains/domains.service';
+import { ApiClientService } from './core/api-client.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,10 @@ import { DomainsComponent } from './domains/domains.component';
     HttpClientModule,
     InlineSVGModule,
   ],
-  providers: [],
+  providers: [
+    ApiClientService,
+    DomainsService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
