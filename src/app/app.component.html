@@ -1,2 +1,17 @@
-<router-outlet></router-outlet>
-<router-outlet name="footer"></router-outlet>
+<div class="container-fluid">
+  <div class="header">
+    <div class="logo"></div>
+    <div class="brand">Kansas</div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+      <router-outlet name="nav"></router-outlet>
+    </div>
+    <div class="col-md-8">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+  <router-outlet name="footer"></router-outlet>
+</div>
