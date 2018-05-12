@@ -1,23 +1,50 @@
 @import "~assets/global";
 
-.last-col {
-  overflow: auto;
+app-domain {
+  display: block;
+  padding: ($grid-gutter-width / 2) $grid-gutter-width;
 
-  .toggle {
-    float: left;
+  .label {
+    margin-bottom: 0.5em;
+  }
 
-    .btn-group {
-      display: flex;
+  input {
+    margin-bottom: 0.5em;
+  }
 
-      .btn:focus {
-        box-shadow: none;
+  .last-col {
+    overflow: auto;
+
+    .toggle {
+      float: left;
+
+      .btn-group {
+        display: flex;
+
+        .btn:focus {
+          box-shadow: none;
+        }
+      }
+    }
+
+    .remove {
+      float: left;
+      padding-top: 2rem;
+      margin-left: $grid-gutter-width;
+
+      @include media-breakpoint-up(sm) {
+        padding-top: 0;
       }
     }
   }
 
-  .remove {
-    float: left;
-    padding-top: 2rem;
-    margin-left: $grid-gutter-width;
+  @include media-breakpoint-up(sm) {
+    .label {
+      display: none;
+    }
+
+    input {
+      margin-bottom: 0;
+    }
   }
 }

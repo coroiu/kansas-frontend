@@ -1,22 +1,22 @@
 <div class="row">
   <div class="col-md-3">
-    <label>Domain</label>
+    <div class="label">Domain</div>
     <input type="text" class="form-control" [ngModel]="domain.domain">
   </div>
 
   <div class="col-md-3">
-    <label>Target</label>
+    <div class="label">Target</div>
     <input type="text" class="form-control" [ngModel]="domain.target">
   </div>
 
   <div class="col-md-2">
-    <label>Port</label>
+    <div class="label">Port</div>
     <input type="number" class="form-control" [ngModel]="domain.port">
   </div>
 
   <div class="col-md-4 last-col">
     <div class="toggle">
-      <label>Protected</label>
+      <div class="label">Protected</div>
       <div class="btn-group btn-group-toggle">
         <button class="btn btn-primary"
           [class.btn-primary]="domain.requiresAuthentication"

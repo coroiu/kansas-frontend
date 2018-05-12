@@ -1,0 +1,16 @@
+@import "~assets/global";
+
+.header {
+  display: none;
+  padding: ($grid-gutter-width / 2) $grid-gutter-width;
+
+  @include media-breakpoint-up(sm) {
+    display: block;
+  }
+}
+
+.header, app-domain {
+  &:nth-child(odd) {
+    background: lighten($content-bg, 5%);
+  }
+}
