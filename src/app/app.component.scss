@@ -1,0 +1,36 @@
+@import "~assets/global";
+
+#main-container {
+  @include media-breakpoint-up(md) {
+    padding: 25px;
+  }
+
+  .header {
+    $icon-height: 128px;
+    overflow: auto;
+
+    .logo {
+      float: left;
+
+      /deep/ svg {
+        height: $icon-height;
+        width: auto;
+
+        .top-fill {
+          fill: $red;
+        }
+
+        .bottom-fill {
+          fill: $gray-400;
+        }
+      }
+    }
+
+    .brand {
+      float: left;
+      font-size: 3rem;
+      margin-left: 0.75em;
+      line-height: $icon-height;
+    }
+  }
+}

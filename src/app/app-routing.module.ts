@@ -6,10 +6,11 @@ import { NavComponent } from './nav/nav.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
+
   { path: 'home', children: [
     { path: '', component: NavComponent, outlet: 'nav' },
     { path: '', component: HomeComponent },
-  ]}
+  ]},
 
   { path: '', component: FooterComponent, outlet: 'footer' },
 ];
