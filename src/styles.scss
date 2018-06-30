@@ -3,3 +3,14 @@
 @import '~assets/global';
 @import '~bootstrap/scss/bootstrap';
 @import '~font-awesome/scss/font-awesome';
+
+.spinner {
+  &::before {
+    @include make-fa-icon("\f021");
+    font-size: 1rem;
+    position: relative;
+    margin-right: 0.5em;
+    -webkit-animation: fa-spin 2s infinite linear;
+    animation: fa-spin 2s infinite linear;
+  }
+}

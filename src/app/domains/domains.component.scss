@@ -15,6 +15,14 @@
   }
 }
 
+.loading {
+  text-align: center;
+
+  .spinner {
+    margin: ($grid-gutter-width / 2) auto;
+  }
+}
+
 a.new-domain {
   display: block;
   margin: $grid-gutter-width / 2;

@@ -44,8 +44,6 @@
     <div class="remove">
       <button class="btn btn-danger" (click)="delete.emit(domain.id)">Remove</button>
     </div>
-    <div class="spinner" *ngIf="isUpdating">
-      updating
-    </div>
+    <div class="spinner" *ngIf="isUpdating"></div>
   </div>
 </div>
