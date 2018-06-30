@@ -17,6 +17,10 @@ export class DomainsService {
     return this.api.post(this.DOMAINS_URL);
   }
 
+  put(domain: DomainModel): Observable<any> {
+    return this.api.put(this.DOMAINS_URL + `/${domain.id}`, domain);
+  }
+
   delete(id: string): Observable<any> {
     return this.api.delete(this.DOMAINS_URL + `/${id}`);
   }
