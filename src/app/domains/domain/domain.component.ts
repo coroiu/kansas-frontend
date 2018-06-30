@@ -1,5 +1,6 @@
-import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, Input, ViewEncapsulation, Output, EventEmitter } from '@angular/core';
 import { DomainModel } from '../domains.model';
+import { DomainsService } from '../domains.service';
 
 @Component({
   selector: 'app-domain',
@@ -9,13 +10,10 @@ import { DomainModel } from '../domains.model';
 })
 export class DomainComponent implements OnInit {
   @Input() domain: DomainModel;
+  @Output() delete = new EventEmitter<string>();
 
-  constructor() { }
+  constructor(private domainsService: DomainsService) { }
 
   ngOnInit() {
   }
-
-  remove() {
-  }
-
 }

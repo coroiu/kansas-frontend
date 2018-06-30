@@ -18,7 +18,9 @@
   </div>
 </div>
 
-<app-domain *ngFor="let domain of domains" [domain]="domain"></app-domain>
+<app-domain *ngFor="let domain of domains"
+  [domain]="domain"
+  (delete)="deleteDomain($event)"></app-domain>
 
 <div class="loading" *ngIf="isLoading">
   <div class="spinner"></div>

@@ -33,4 +33,11 @@ export class DomainsComponent implements OnInit {
       .post()
       .subscribe(_ => this.loadDomains());
   }
+
+  deleteDomain(id: string) {
+    this.isLoading = true;
+    this.domainsService
+      .delete(id)
+      .subscribe(_ => this.loadDomains());
+  }
 }
