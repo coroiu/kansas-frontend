@@ -19,3 +19,13 @@
 </div>
 
 <app-domain *ngFor="let domain of domains" [domain]="domain"></app-domain>
+
+<div class="loading" *ngIf="isLoading">
+  <div class="spinner"></div>
+</div>
+
+<a class="new-domain" (click)="addDomain()" *ngIf="!isLoading">
+  <div class="icon"></div>
+  <div class="text">Add new domain</div>
+</a>
+

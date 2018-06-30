@@ -18,7 +18,7 @@ export class ApiClientService {
     return this.http.get(API_URL + endpoint, { headers: this.defaultHeaders }) as Observable<T>;
   }
 
-  post<T = any>(endpoint: string, data: any): Observable<T> {
+  post<T = any>(endpoint: string, data?: any): Observable<T> {
     return this.http.post(API_URL + endpoint, data, { headers: this.defaultHeaders }) as Observable<T>;
   }
 

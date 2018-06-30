@@ -13,4 +13,7 @@ export class DomainsService {
     return this.api.get(this.DOMAINS_URL);
   }
 
+  post(): Observable<any> {
+    return this.api.post(this.DOMAINS_URL);
+  }
 }

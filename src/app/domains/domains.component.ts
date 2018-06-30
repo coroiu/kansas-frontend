@@ -8,14 +8,29 @@ import { DomainsService } from './domains.service';
   styleUrls: ['./domains.component.scss']
 })
 export class DomainsComponent implements OnInit {
+  isLoading = false;
   domains: DomainModel[];
 
   constructor(private domainsService: DomainsService) { }
 
   ngOnInit() {
-    this.domainsService
-      .list()
-      .subscribe(d => this.domains = d);
+    this.loadDomains();
   }
 
+  loadDomains() {
+    this.isLoading = true;
+    this.domainsService
+      .list()
+      .subscribe(d => {
+        this.isLoading = false;
+        this.domains = d;
+      });
+  }
+
+  addDomain() {
+    this.isLoading = true;
+    this.domainsService
+      .post()
+      .subscribe(_ => this.loadDomains());
+  }
 }
